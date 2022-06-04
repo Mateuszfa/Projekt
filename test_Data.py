@@ -1,0 +1,13 @@
+# DANE
+username_bad = "locked_out_user"
+username_good = "standard_user"
+username_bug = "problem_user"
+password = "secret_sauce"
+first_name = "Jacek"
+last_name = "Placek"
+zip_code = "6154848"
+error_text = "Epic sadface: Sorry, this user has been locked out."
+error_text2 = "Error: Last Name is required"
+error_text3 = "Epic sadface: Username is required"
+error_text4 = "Epic sadface: Password is required"
+cash = "Total: $103.65"
