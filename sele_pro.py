@@ -204,9 +204,39 @@ class SwaglabshopAction(unittest.TestCase):
         print("store is buggy, you can't add some item to your cart !!")
 
 
+    def testCheckWebSaucelab(self):
+        usr_input = self.driver.find_element(By.ID, "user-name")
+        usr_input.send_keys(username_good)
+        sleep(1)
 
+        pas_input = self.driver.find_element(By.ID, "password")
+        pas_input.send_keys(password)
+        sleep(1)
 
+        log_button = self.driver.find_element(By.ID, "login-button")
+        log_button.click()
 
+        hamburger_btn = self.driver.find_element(By.ID, "react-burger-menu-btn")
+        hamburger_btn.click()
+
+        about_btn = self.driver.find_element(By.ID, "about_sidebar_link")
+        about_btn.click()
+
+        test_auto = self.driver.find_element(By.XPATH,
+                                             '//*[@id="entry-5U3ujvmSWB2dJwCGO5FBJY"]/div/div[2]/div[8]/a/div/div[2]/div[1]/div/h2')
+        test_auto.click()
+
+        lern_sele = self.driver.find_element(By.XPATH,
+                                             '//*[@id="entry-3JPlCmOvVJupHkEmHPuu5k"]/div/div/div[1]/div/div[2]/div[2]/div/a/span')
+        lern_sele.click()
+
+        pageDown = self.driver.find_element_by_tag_name('html')
+        pageDown.send_keys(Keys.PAGE_DOWN)
+        sleep(2)
+
+        lernMore = self.driver.find_element(By.XPATH,
+                                            '//*[@id="entry-7gKMhNpgUJlLizaVVbuDZ2"]/div/div/div[2]/div/div[2]/ul/li[1]/a/span')
+        lernMore.click()
 
     def testPurchaseBug2(self):
 
